@@ -3,7 +3,6 @@ package builderAndAbstractFactory;
 public class Main {
     public static void main(String[] args) {
 
-
         Toy legoToy = new LegoFactory().createToy();
         System.out.println(legoToy.factory);
 
