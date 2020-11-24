@@ -9,7 +9,7 @@
         </encoder>
     </appender>
 
-    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <appender name="FILE_1" class="ch.qos.logback.core.FileAppender">
         <file> user_seen_posts/first_user.txt </file>
         <append>true</append>
         <encoder>
@@ -18,11 +18,11 @@
     </appender>
 
     <logger name="first_user" level="DEBUG" additivity="false">
-        <appender-ref ref="FILE"/>
+        <appender-ref ref="FILE_1"/>
         <appender-ref ref="STDOUT" />
     </logger>
 
-    <appender name="ANALYTICS-FILE" class="ch.qos.logback.core.FileAppender">
+    <appender name="FILE_2" class="ch.qos.logback.core.FileAppender">
         <file>user_seen_posts/second_user.text</file>
         <append>true</append>
         <encoder>
@@ -31,14 +31,12 @@
     </appender>
     <!-- additivity=false ensures analytics data only goes to the analytics log -->
     <logger name="second_user" level="DEBUG" additivity="false">
-        <appender-ref ref="ANALYTICS-FILE"/>
-
+        <appender-ref ref="FILE_2"/>
     </logger>
-
 
 
     <root level="info">
         <appender-ref ref="STDOUT" />
-        <appender-ref ref="FILE" />
+        <appender-ref ref="FILE_1" />
     </root>
 </configuration>

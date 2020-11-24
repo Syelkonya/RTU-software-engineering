@@ -3,6 +3,7 @@ package IteratorAndObserver;
 import java.util.ArrayList;
 import java.util.List;
 
+import static IteratorAndObserver.Main.logToUserFile;
 import static IteratorAndObserver.Main.postIterator;
 
 public class PostAddListener {
@@ -21,11 +22,12 @@ public class PostAddListener {
         if (posts.size() > size)
             for (User user: users) {
                 if (user.subscribed) {
-                    user.logger.info("\n///////////////////UPDATING///////////////////////");
-                    while (postIterator.hasNext()){
-                        Post currentPost = postIterator.getNext();
-                        user.logger.info((currentPost.text + "  " +  currentPost.imageUrl));
-                    }
+                    user.logger.info("///////////////////UPDATING///////////////////////");
+                    logToUserFile();
+//                    while (postIterator.hasNext()){
+//                        Post currentPost = postIterator.getNext();
+//                        user.logger.info((currentPost.text + "  " +  currentPost.imageUrl));
+//                    }
                 }
             }
 

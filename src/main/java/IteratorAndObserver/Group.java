@@ -9,9 +9,8 @@ public class Group {
     List<Post> posts = new ArrayList();
 
 
-    public void addPost(Post post) throws InterruptedException {
+    public void addPost(Post post) {
         posts.add(post);
-        Thread.sleep(5_000);
         postAddListener.update(posts);
     }
 }

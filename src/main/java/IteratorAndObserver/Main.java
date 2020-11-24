@@ -28,18 +28,20 @@ public class Main {
         User firstUser = new User("Первый", firstUserLogger);
         User secondUser = new User("Второй", secondUserLogger);
 
+
         userList.add(firstUser);
         userList.add(secondUser);
 
         postAddListener = new PostAddListener(groupVK.posts,userList,groupVK.posts.size());
         logToUserFile();
 
+        Thread.sleep(5_000);
+        firstUser.subscribed=false;
+        groupVK.addPost(new Post("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77702004989.jpg", "какой-то текст"));
 
-        groupVK.addPost(new Post("УРЛЛЛЛЛЛЛА", "Модный текст"));
-        //Листенер должен ловить изменение
     }
 
-    private static void logToUserFile(){
+    public static void logToUserFile(){
         for (User user: userList) {
             if (user.subscribed) {
                 while (postIterator.hasNext()){
