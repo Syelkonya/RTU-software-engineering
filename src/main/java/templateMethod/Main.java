@@ -1,4 +1,4 @@
-package templateMethod;
+package main.java.templateMethod;
 
 import java.io.BufferedReader;
 import java.io.IOException;

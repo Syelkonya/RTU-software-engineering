@@ -1,4 +1,4 @@
-package templateMethod;
+package main.java.templateMethod;
 
 public class CarShopContactCenter extends ContactCenter {
 

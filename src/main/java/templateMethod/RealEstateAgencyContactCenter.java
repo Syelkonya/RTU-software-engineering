@@ -1,4 +1,4 @@
-package templateMethod;
+package main.java.templateMethod;
 
 public class RealEstateAgencyContactCenter  extends ContactCenter {
     @Override

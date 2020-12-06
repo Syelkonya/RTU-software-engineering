@@ -1,4 +1,4 @@
-package templateMethod;
+package main.java.templateMethod;
 
 abstract public class ContactCenter {
 
